@@ -1,8 +1,8 @@
 #![warn(clippy::all, rust_2018_idioms)]
-
+mod drag_and_drop;
 mod app;
 pub use app::TemplateApp;
-
+use tokio_modbus::prelude::*;
 // ----------------------------------------------------------------------------
 // When compiling for web:
 

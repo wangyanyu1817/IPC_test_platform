@@ -18,8 +18,13 @@ crate-type = ["cdylib", "rlib"]
 
 [dependencies]
 egui = "0.18.0"
+#eframe = { version = "0.18.0" }
 eframe = { version = "0.18.0", features = ["persistence"] }
 serde = { version = "1", features = ["derive"] } # You only need this if you want app persistence
+tokio-modbus = { version = "*", default-features = false, features = ["tcp", "sync"] }
+tokio = { version = "1.18.0", features = ["full"] }
+futures = { version = "0.3.21"}
+lazy_static = "*"
 
 # native:
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
